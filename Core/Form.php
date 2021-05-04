@@ -170,7 +170,7 @@ class Form
         $this->formCode .= '<button ';
         //Add atributes
         $this->formCode .= $attributs ? $this->ajoutAttributs($attributs) : '';
-        //Add tex and close button
+        //Add text and close button
         $this->formCode .= ">$text</button>";
 
         return $this;

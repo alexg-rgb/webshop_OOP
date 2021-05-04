@@ -21,7 +21,7 @@ class UsersController extends Controller
             ->ajoutInput('email', 'email', ['class' => 'form-control', 'id' => 'email'])
             ->ajoutLabelFor('pass', 'Password :')
             ->ajoutInput('password', 'password', ['id' => 'pass','class' => 'form-control'])
-            ->ajoutButton('Connect', ['class' => 'btn btn-primary'])
+            ->ajoutButton('Connect', ['class' => 'btn btn-primary mt-3 mb-1'])
             ->finForm();
          
         $this->render('users/login', ['loginForm' => $form->create()]);
@@ -59,7 +59,7 @@ class UsersController extends Controller
             ->ajoutInput('email', 'email', ['id' => 'email', 'class' => 'form-control'])
             ->ajoutLabelFor('password', 'Password :')
             ->ajoutInput('password', 'password', ['id' => 'pass', 'class' => 'form-control'])
-            ->ajoutButton('M\'inscrire', ['class' => 'btn btn-primary'])
+            ->ajoutButton('M\'inscrire', ['class' => 'btn btn-primary mt-3 mb-1'])
             ->finForm();
 
             $this->render('users/register', ['registerForm' => $form->create()]);
