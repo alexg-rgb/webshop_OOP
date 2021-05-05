@@ -59,10 +59,25 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="login-box">
-						<select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							<option>Register Here</option>
-							<option>Sign In</option>
-						</select>
+						<!-- <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
+							<option><a href="/users/register">Register Here</a></option>
+                            <option><a href="/users/login">Sign In</a></option>
+                            <option><a href="/users/profile">Profile</a></option>
+                            <option><a href="/users/logout">Sign out</a></option>
+						</select> -->
+                        <select  id="basic" class="selectpicker show-tick form-control" data-placeholder="" onchange="location = this.value;">
+                            <?php if(isset($_SESSION['user']) && !empty($_SESSION['user']['id'])): ?>
+                                <option value="/users/profile">Profile</option>
+                                <option value="/users/logout">Sign out</option>
+                            <?php else: ?>
+                                <option value="/users/register">Register Here</option>
+                            <option value="/users/login">Sign In</option>
+                            <?php endif; ?>
+                            
+                            
+                            
+                        </select>
+
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
