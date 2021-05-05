@@ -71,11 +71,8 @@
                                 <option value="/users/logout">Sign out</option>
                             <?php else: ?>
                                 <option value="/users/register">Register Here</option>
-                            <option value="/users/login">Sign In</option>
+                                <option value="/users/login">Sign In</option>
                             <?php endif; ?>
-                            
-                            
-                            
                         </select>
 
 					</div>
