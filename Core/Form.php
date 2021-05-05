@@ -131,6 +131,23 @@ class Form
         return $this;
     }
 
+    public function ajoutDivOpen( array $attributs =[]): self
+    {
+        //On ouvre la balise
+        $this->formCode .= "<div ";
+
+        //On ajoute les attriburs
+        $this->formCode .= $attributs ? $this->ajoutAttributs($attributs).'>' : '>';
+
+        return $this;
+    }
+    public function ajoutDivClose(): self
+    {
+        //On ouvre la balise
+        $this->formCode .= "</div>";
+        return $this;
+    }
+
     public function ajoutTextarea(string $name, string $value = '', array $attributs = []): self
     {
         //On ouvre la balise
